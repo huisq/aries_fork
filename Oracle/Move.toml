@@ -1,0 +1,47 @@
+[package]
+name = "Oracle"
+version = "0.0.0"
+
+[addresses]
+std = "0x1"
+aptos_framework = "0x1"
+aptos_std = "0x1"
+oracle = "0x9770fa9c725cbd97eb50b2be5f7416efdfd1f1554beb0750d4dae4c64e860da3"
+pyth = "0x7e783b349d3e89cf5931af376ebeadbfab855b3fa239b7ada8f5a92fbea6b387"
+deployer = "0xb31e712b26fd295357355f6845e77c888298636609e93bc9b05f0f604049f434"
+wormhole = "0x5bc11445584a763c1fa7ed39081f1b920954da14e04b32440cba863d03e19625"
+
+# Testnet named addresses
+# switchboard = "0xb91d3fef0eeb4e685dc85e739c7d3e2968784945be4424e92e2f86e2418bf271"
+
+# Mainnet named addresses
+switchboard = "0x7d7e436f0b2aafde60774efb26ccc432cf881b677aca7faaf2a01879bd19fb8"
+
+[dependencies]
+Decimal = { local = "../decimal" }
+UtilTypes = { local = "../util-types" }
+
+[dependencies.MoveStdlib]
+git = "https://github.com/aptos-labs/aptos-core.git"
+subdir = "aptos-move/framework/move-stdlib"
+rev = "main"
+
+[dependencies.AptosFramework]
+git = "https://github.com/aptos-labs/aptos-core.git"
+subdir = "aptos-move/framework/aptos-framework"
+rev = "main"
+
+[dependencies.AptosStdlib]
+git = "https://github.com/aptos-labs/aptos-core.git"
+subdir = "aptos-move/framework/aptos-stdlib"
+rev = "main"
+
+[dependencies.Switchboard]
+git = "https://github.com/switchboard-xyz/aptos-sdk.git"
+subdir = "move/switchboard"
+rev = "main"
+
+[dependencies.Pyth]
+git = "https://github.com/pyth-network/pyth-crosschain.git"
+subdir = "target_chains/aptos/contracts"
+rev = "main"
